@@ -1,12 +1,11 @@
- <!-- footer content -->
- <footer>
-          <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-          </div>
-          <div class="clearfix"></div>
-        </footer>
-        <!-- /footer content -->
-      </div>
+<footer>
+                <div class="pull-right">
+                    Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+                </div>
+                <div class="clearfix"></div>
+            </footer>
+            <!-- /footer content -->
+        </div>
     </div>
 
     <!-- jQuery -->
@@ -48,7 +47,8 @@
     <script src="{{url('')}}/assets/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
 
     <!-- Custom Theme Scripts -->
-    <script src="../build/js/custom.min.js"></script>
-	
-  </body>
+    <script src="{{url('')}}/assets/build/js/custom.min.js"></script>
+
+</body>
+
 </html>

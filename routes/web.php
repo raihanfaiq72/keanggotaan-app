@@ -18,3 +18,24 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/','page\DashboardController@index');
+Route::get('/login','AuthController@login');
+Route::post('loginProses','AuthController@loginProses');
+
+Route::middleware(['login'])->group(function () {
+
+
+    // role super admin
+
+    Route::middleware(['admin'])->group(function () {
+
+        //dashboard
+    });
+
+    Route::middleware(['author'])->group(function () {
+
+        //dashboard
+        Route::resource('author/dashboard', 'author\dashboardController');
+        Route::resource('author/artikel', 'author\artikelController');
+        Route::resource('author/profile', 'author\profileController');
+    });
+});

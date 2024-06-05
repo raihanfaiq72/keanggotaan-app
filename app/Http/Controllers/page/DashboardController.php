@@ -11,12 +11,14 @@ class DashboardController extends Controller
 {
     private $url = '/';
     private $views = 'page/dashboard';
+    private $viewss = 'layout/header';
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
         return view("$this->views"."/index");
+        // return view("$this->viewss");
     }
 
     /**

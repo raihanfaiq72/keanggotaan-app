@@ -9,8 +9,6 @@
 @endsection
 
 @section('main')
-
-<!-- @include('layout/header') -->
 <!-- page content -->
 <div class="right_col" role="main">
     <!-- top tiles -->
@@ -24,27 +22,32 @@
             <div class="col-md-2 col-sm-4  tile_stats_count">
                 <span class="count_top"><i class="fa fa-clock-o"></i> Average Time</span>
                 <div class="count">123.50</div>
-                <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span>
+                <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last
+                    Week</span>
             </div>
             <div class="col-md-2 col-sm-4  tile_stats_count">
                 <span class="count_top"><i class="fa fa-user"></i> Total Males</span>
                 <div class="count green">2,500</div>
-                <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+                <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last
+                    Week</span>
             </div>
             <div class="col-md-2 col-sm-4  tile_stats_count">
                 <span class="count_top"><i class="fa fa-user"></i> Total Females</span>
                 <div class="count">4,567</div>
-                <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
+                <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last
+                    Week</span>
             </div>
             <div class="col-md-2 col-sm-4  tile_stats_count">
                 <span class="count_top"><i class="fa fa-user"></i> Total Collections</span>
                 <div class="count">2,315</div>
-                <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+                <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last
+                    Week</span>
             </div>
             <div class="col-md-2 col-sm-4  tile_stats_count">
                 <span class="count_top"><i class="fa fa-user"></i> Total Connections</span>
                 <div class="count">7,325</div>
-                <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+                <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last
+                    Week</span>
             </div>
         </div>
     </div>
@@ -412,10 +415,10 @@
                                         <div class="byline">
                                             <span>13 hours ago</span> by <a>Jane Smith</a>
                                         </div>
-                                        <p class="excerpt">Film festivals used to be do-or-die moments for movie makers.
-                                            They were where you met the producers that could fund your project, and if
-                                            the buyers liked your flick, they’d pay to Fast-forward and…
-                                            <a>Read&nbsp;More</a>
+                                        <p class="excerpt">Film festivals used to be do-or-die moments for
+                                            movie makers. They were where you met the producers that could
+                                            fund your project, and if the buyers liked your flick, they’d
+                                            pay to Fast-forward and… <a>Read&nbsp;More</a>
                                         </p>
                                     </div>
                                 </div>
@@ -429,10 +432,10 @@
                                         <div class="byline">
                                             <span>13 hours ago</span> by <a>Jane Smith</a>
                                         </div>
-                                        <p class="excerpt">Film festivals used to be do-or-die moments for movie makers.
-                                            They were where you met the producers that could fund your project, and if
-                                            the buyers liked your flick, they’d pay to Fast-forward and…
-                                            <a>Read&nbsp;More</a>
+                                        <p class="excerpt">Film festivals used to be do-or-die moments for
+                                            movie makers. They were where you met the producers that could
+                                            fund your project, and if the buyers liked your flick, they’d
+                                            pay to Fast-forward and… <a>Read&nbsp;More</a>
                                         </p>
                                     </div>
                                 </div>
@@ -446,10 +449,10 @@
                                         <div class="byline">
                                             <span>13 hours ago</span> by <a>Jane Smith</a>
                                         </div>
-                                        <p class="excerpt">Film festivals used to be do-or-die moments for movie makers.
-                                            They were where you met the producers that could fund your project, and if
-                                            the buyers liked your flick, they’d pay to Fast-forward and…
-                                            <a>Read&nbsp;More</a>
+                                        <p class="excerpt">Film festivals used to be do-or-die moments for
+                                            movie makers. They were where you met the producers that could
+                                            fund your project, and if the buyers liked your flick, they’d
+                                            pay to Fast-forward and… <a>Read&nbsp;More</a>
                                         </p>
                                     </div>
                                 </div>
@@ -463,10 +466,10 @@
                                         <div class="byline">
                                             <span>13 hours ago</span> by <a>Jane Smith</a>
                                         </div>
-                                        <p class="excerpt">Film festivals used to be do-or-die moments for movie makers.
-                                            They were where you met the producers that could fund your project, and if
-                                            the buyers liked your flick, they’d pay to Fast-forward and…
-                                            <a>Read&nbsp;More</a>
+                                        <p class="excerpt">Film festivals used to be do-or-die moments for
+                                            movie makers. They were where you met the producers that could
+                                            fund your project, and if the buyers liked your flick, they’d
+                                            pay to Fast-forward and… <a>Read&nbsp;More</a>
                                         </p>
                                     </div>
                                 </div>
@@ -534,7 +537,8 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <div id="world-map-gdp" class="col-md-8 col-sm-12 " style="height:230px;"></div>
+                                <div id="world-map-gdp" class="col-md-8 col-sm-12 " style="height:230px;">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -571,39 +575,48 @@
                                 <ul class="to_do">
                                     <li>
                                         <p>
-                                            <input type="checkbox" class="flat"> Schedule meeting with new client </p>
+                                            <input type="checkbox" class="flat"> Schedule meeting with new
+                                            client </p>
                                     </li>
                                     <li>
                                         <p>
-                                            <input type="checkbox" class="flat"> Create email address for new intern</p>
+                                            <input type="checkbox" class="flat"> Create email address for
+                                            new intern</p>
                                     </li>
                                     <li>
                                         <p>
-                                            <input type="checkbox" class="flat"> Have IT fix the network printer</p>
+                                            <input type="checkbox" class="flat"> Have IT fix the network
+                                            printer</p>
                                     </li>
                                     <li>
                                         <p>
-                                            <input type="checkbox" class="flat"> Copy backups to offsite location</p>
+                                            <input type="checkbox" class="flat"> Copy backups to offsite
+                                            location</p>
                                     </li>
                                     <li>
                                         <p>
-                                            <input type="checkbox" class="flat"> Food truck fixie locavors mcsweeney</p>
+                                            <input type="checkbox" class="flat"> Food truck fixie locavors
+                                            mcsweeney</p>
                                     </li>
                                     <li>
                                         <p>
-                                            <input type="checkbox" class="flat"> Food truck fixie locavors mcsweeney</p>
+                                            <input type="checkbox" class="flat"> Food truck fixie locavors
+                                            mcsweeney</p>
                                     </li>
                                     <li>
                                         <p>
-                                            <input type="checkbox" class="flat"> Create email address for new intern</p>
+                                            <input type="checkbox" class="flat"> Create email address for
+                                            new intern</p>
                                     </li>
                                     <li>
                                         <p>
-                                            <input type="checkbox" class="flat"> Have IT fix the network printer</p>
+                                            <input type="checkbox" class="flat"> Have IT fix the network
+                                            printer</p>
                                     </li>
                                     <li>
                                         <p>
-                                            <input type="checkbox" class="flat"> Copy backups to offsite location</p>
+                                            <input type="checkbox" class="flat"> Copy backups to offsite
+                                            location</p>
                                     </li>
                                 </ul>
                             </div>
@@ -723,6 +736,7 @@
     </div>
 </div>
 <!-- /page content -->
+
 @include('layout/footer')
 @endsection
 

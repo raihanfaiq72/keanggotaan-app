@@ -12,20 +12,21 @@
     <title>Gentelella Alela!</title>
 
     <!-- Bootstrap -->
-    <link href="{{ url('')}}/assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{url('')}}/assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="{{ url('')}}/assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{url('')}}/assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="{{ url('')}}/assets/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="{{url('')}}/assets/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
-    <link href="{{ url('')}}/assets/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <link href="{{url('')}}/assets/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
 
     <!-- bootstrap-progressbar -->
-    <link href="{{ url('')}}/assets/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <link href="{{url('')}}/assets/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css"
+        rel="stylesheet">
     <!-- JQVMap -->
-    <link href="{{ url('')}}/assets/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
+    <link href="{{url('')}}/assets/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
     <!-- bootstrap-daterangepicker -->
-    <link href="{{ url('')}}/assets/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="{{url('')}}/assets/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="{{url('')}}/assets/build/css/custom.min.css" rel="stylesheet">
@@ -46,7 +47,8 @@
                     <!-- menu profile quick info -->
                     <div class="profile clearfix">
                         <div class="profile_pic">
-                            <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                            <img src="{{url('')}}/assets/production/images/img.jpg" alt="..."
+                                class="img-circle profile_img">
                         </div>
                         <div class="profile_info">
                             <span>Welcome,</span>
@@ -196,7 +198,7 @@
                             <li class="nav-item dropdown open" style="padding-left: 15px;">
                                 <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true"
                                     id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                                    <img src="images/img.jpg" alt="">John Doe
+                                    <img src="{{url('')}}/assets/production/images/img.jpg" alt="">John Doe
                                 </a>
                                 <div class="dropdown-menu dropdown-usermenu pull-right"
                                     aria-labelledby="navbarDropdown">
@@ -221,7 +223,8 @@
                                     aria-labelledby="navbarDropdown1">
                                     <li class="nav-item">
                                         <a class="dropdown-item">
-                                            <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                            <span class="image"><img src="{{url('')}}/assets/production/images/img.jpg"
+                                                    alt="Profile Image" /></span>
                                             <span>
                                                 <span>John Smith</span>
                                                 <span class="time">3 mins ago</span>
@@ -234,7 +237,8 @@
                                     </li>
                                     <li class="nav-item">
                                         <a class="dropdown-item">
-                                            <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                            <span class="image"><img src="{{url('')}}/assets/production/images/img.jpg"
+                                                    alt="Profile Image" /></span>
                                             <span>
                                                 <span>John Smith</span>
                                                 <span class="time">3 mins ago</span>
@@ -247,7 +251,8 @@
                                     </li>
                                     <li class="nav-item">
                                         <a class="dropdown-item">
-                                            <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                            <span class="image"><img src="{{url('')}}/assets/production/images/img.jpg"
+                                                    alt="Profile Image" /></span>
                                             <span>
                                                 <span>John Smith</span>
                                                 <span class="time">3 mins ago</span>
@@ -260,7 +265,8 @@
                                     </li>
                                     <li class="nav-item">
                                         <a class="dropdown-item">
-                                            <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                            <span class="image"><img src="{{url('')}}/assets/production/images/img.jpg"
+                                                    alt="Profile Image" /></span>
                                             <span>
                                                 <span>John Smith</span>
                                                 <span class="time">3 mins ago</span>
@@ -286,4 +292,7 @@
                 </div>
             </div>
             <!-- /top navigation -->
+
             @yield('main')
+            <!-- footer content -->
+           
