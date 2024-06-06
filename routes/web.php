@@ -17,8 +17,8 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/','page\DashboardController@index');
-Route::get('/login','AuthController@login');
+// Route::get('/','page\DashboardController@index');
+Route::get('/','AuthController@login');
 Route::get('logout','AuthController@logout');
 Route::post('loginProses','AuthController@loginProses');
 Route::get('register','AuthController@register');
@@ -26,16 +26,14 @@ Route::post('registerProses','AuthController@registerProses');
 Route::middleware(['login'])->group(function () {
 
 
-    // role super admin
-
     Route::middleware(['admin'])->group(function () {
 
         Route::resource('admin/dashboard','page\DashboardController');
+        Route::resource('admin/crud','SimpleCrudController');
     });
 
     Route::middleware(['sekretaris'])->group(function () {
 
-        //dashboard
         Route::resource('sekretaris/dashboard','page\DashboardController');
     });
 });
