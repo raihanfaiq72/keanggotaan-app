@@ -30,12 +30,12 @@ Route::middleware(['login'])->group(function () {
 
     Route::middleware(['admin'])->group(function () {
 
-        Route::resource('qwerty/dashboard','page\DashboardController');
+        Route::resource('admin/dashboard','page\DashboardController');
     });
 
     Route::middleware(['sekretaris'])->group(function () {
 
         //dashboard
-        Route::resource('admin/dashboard','page\DashboardController');
+        Route::resource('sekretaris/dashboard','page\DashboardController');
     });
 });

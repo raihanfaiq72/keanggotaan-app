@@ -86,6 +86,8 @@ class AuthController extends Controller
             'katasandi'     => $request->password
         ];
 
+        // dd($data);
+
         User::create($data);
 
         return redirect('login')->with('sukses','berhasil register silahkan login');
