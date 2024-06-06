@@ -24,8 +24,8 @@
 
   <body class="login">
     <div>
-      <a class="hiddenanchor" id="signup"></a>
-      <a class="hiddenanchor" id="signin"></a>
+      <a class="hiddenanchor" id="signup">ewqh</a>
+      <a class="hiddenanchor" id="signin">well</a>
 
       <div class="login_wrapper">
         <div class="animate form login_form">
@@ -48,7 +48,7 @@
 
               <div class="separator">
                 <p class="change_link">New to site?
-                  <a href="#signup" class="to_register"> Create Account </a>
+                  <a href="{{url('register')}}" class="to_register"> Create Account </a>
                 </p>
 
                 <div class="clearfix"></div>

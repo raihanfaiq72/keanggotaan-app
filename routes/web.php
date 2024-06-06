@@ -19,8 +19,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/','page\DashboardController@index');
 Route::get('/login','AuthController@login');
+Route::get('logout','AuthController@logout');
 Route::post('loginProses','AuthController@loginProses');
-
+Route::get('register','AuthController@register');
+Route::post('registerProses','AuthController@registerProses');
 Route::middleware(['login'])->group(function () {
 
 
@@ -28,14 +30,12 @@ Route::middleware(['login'])->group(function () {
 
     Route::middleware(['admin'])->group(function () {
 
-        //dashboard
+        Route::resource('qwerty/dashboard','page\DashboardController');
     });
 
-    Route::middleware(['author'])->group(function () {
+    Route::middleware(['sekretaris'])->group(function () {
 
         //dashboard
-        Route::resource('author/dashboard', 'author\dashboardController');
-        Route::resource('author/artikel', 'author\artikelController');
-        Route::resource('author/profile', 'author\profileController');
+        Route::resource('admin/dashboard','page\DashboardController');
     });
 });
