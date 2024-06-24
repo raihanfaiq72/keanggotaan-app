@@ -28,7 +28,8 @@ Route::middleware(['login'])->group(function () {
 
     Route::middleware(['admin'])->group(function () {
 
-        Route::resource('admin/dashboard','page\DashboardController');
+        Route::resource('admin/dashboard','page\Admin\DashboardController');
+        Route::resource('admin/anggota','page\Admin\AnggotaController');
         Route::resource('admin/crud','SimpleCrudController');
     });
 

@@ -5,7 +5,7 @@
         <ul class="nav side-menu">
             <li><a><i class="fa fa-home"></i> Home </a>
             </li>
-            <li><a href="{{url('admin/crud')}}"><i class="fa fa-home"></i> simple crud </a>
+            <li><a href="{{url('admin/anggota')}}"><i class="fa fa-home"></i>Anggota</a>
             </li>
             <li><a><i class="fa fa-home"></i> Home </a>
             </li>

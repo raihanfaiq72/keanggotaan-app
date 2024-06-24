@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\page;
+namespace App\Http\Controllers\page\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -10,15 +10,15 @@ use App\Models\Users;
 class DashboardController extends Controller
 {
     private $url = '/';
-    private $views = 'page/dashboard';
-    private $viewss = 'layout/header';
+    private $views = 'page/admin/dashboard';
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view("$this->views"."/index");
-        // return view("$this->viewss");
+        return view("$this->views"."/index",[
+            'title' => 'Admin | Dashboard'
+        ]);
     }
 
     /**
