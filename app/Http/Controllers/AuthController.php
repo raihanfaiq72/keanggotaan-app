@@ -93,6 +93,6 @@ class AuthController extends Controller
     public function logout()
     {
         session()->flush();
-        return redirect('login');
+        return redirect('/');
     }
 }
