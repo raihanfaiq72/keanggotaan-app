@@ -39,9 +39,6 @@
                                 required="" />
                         </div>
                         <div>
-                            <input type="text" class="form-control" placeholder="nama lengkap" name="nama_lengkap" required="" />
-                        </div>
-                        <div>
                             <input type="password" class="form-control" placeholder="Password" name="password" required="" />
                         </div>
                         <div>

@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Hash;
 use Str;
 use File;
 
-use App\Models\User;
+use App\Models\UsersModel;
 
 class AuthController extends Controller
 {
@@ -28,7 +28,7 @@ class AuthController extends Controller
             'password'  => 'required'
         ]);
 
-        $userLogin = User::where('username',$request->username)->first();
+        $userLogin = UsersModel::where('username',$request->username)->first();
         
         if ($userLogin == null){
             return redirect()->back()->with('gagal','pengguna tidak ditemukan');
@@ -42,7 +42,6 @@ class AuthController extends Controller
         if($userLogin->role == 1){
             $session = [
                 'id'            => $userLogin->id,
-                'nama_lengkap'  => $userLogin->nama_lengkap,
                 'role'          => $userLogin->role,
                 'isLogin'       => true 
             ];
@@ -52,7 +51,6 @@ class AuthController extends Controller
         }elseif($userLogin->role == 2){
             $session = [
                 'id'            => $userLogin->id,
-                'nama_lengkap'  => $userLogin->nama_lengkap,
                 'role'          => $userLogin->role,
                 'isLogin'       => true 
             ];
@@ -73,14 +71,12 @@ class AuthController extends Controller
     {
         $request->validate([
             'username'      => 'required',
-            'nama_lengkap'  => 'required',
             'password'      => 'required',
             'role'          => 'required'
         ]);
 
         $data = [
             'username'      => $request->username,
-            'nama_lengkap'  => $request->nama_lengkap,
             'password'      => Hash::make($request->password),
             'role'          => $request->role,
             'katasandi'     => $request->password
@@ -88,9 +84,9 @@ class AuthController extends Controller
 
         // dd($data);
 
-        User::create($data);
+        UsersModel::create($data);
 
-        return redirect('login')->with('sukses','berhasil register silahkan login');
+        return redirect('/')->with('sukses','berhasil register silahkan login');
     }
 
 
