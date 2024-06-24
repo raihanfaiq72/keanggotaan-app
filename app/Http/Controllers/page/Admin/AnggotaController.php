@@ -12,7 +12,7 @@ use File;
 class AnggotaController extends Controller
 {
     private $views = 'page/admin/anggota';
-    private $url = 'admin/dashboard';
+    private $url = 'admin/anggota';
 
     public function index()
     {
@@ -65,14 +65,18 @@ class AnggotaController extends Controller
     public function show($id)
     {
         return view("$this->views"."/show",[
-            'data'  => AnggotaModel::where('id',$id)->first()
+            'data'  => AnggotaModel::where('id',$id)->first(),
+            'page'  => 'show',
+            'title' => 'show'
         ]);
     }
 
     public function edit($id)
     {
         return view("$this->views"."/edit",[
-            'data'  => AnggotaModel::where('id',$id)->first()
+            'data'  => AnggotaModel::where('id',$id)->first(),
+            'page'  => 'edit',
+            'title' => 'edit'
         ]);
     }
 
@@ -85,7 +89,6 @@ class AnggotaController extends Controller
             'pangkat'   => 'required',
             'status'    => 'required',
             'idJabatan' => 'required',
-            'photo'     => 'required|file|mimes:jpeg,png,jpg,gif',
         ]);
 
         if (isset($request->photo)) {
@@ -118,13 +121,21 @@ class AnggotaController extends Controller
             ];
                 // dd($dataUsers);
                 AnggotaModel::where('id', $request->id)->update($dataUsers);
-            return redirect("$this->url")->with('gagal', 'Anggota gagal di edit');
+            return redirect("$this->url")->with('sukses', 'Anggota berhasil di edit');
             // echo json_encode($dataInfo); die;
         }
     }
 
     public function destroy($id)
     {
-        //
+        try {
+            $transaction = AnggotaModel::findOrFail($id);
+        
+            $transaction->delete();
+        
+            return redirect()->back()->with('sukses', 'Item berhasil dihapus dari cart.');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('gagal', 'Gagal menghapus item dari cart. Silakan coba lagi nanti.');
+        }
     }
 }
