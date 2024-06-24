@@ -7,6 +7,8 @@
             </li>
             <li><a href="{{url('admin/anggota')}}"><i class="fa fa-home"></i>Anggota</a>
             </li>
+            <li><a href="{{url('admin/jabatan')}}"><i class="fa fa-home"></i>Jabatan</a>
+            </li>
             <li><a><i class="fa fa-home"></i> Home </a>
             </li>
             <li><a><i class="fa fa-home"></i> Home </a>
