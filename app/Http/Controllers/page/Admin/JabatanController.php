@@ -36,7 +36,15 @@ class JabatanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request -> validate([
+            'nama' => 'required'
+        ]);
+
+        Jabatan::create([
+            'nama'      => $request->nama,
+        ]);
+
+        return redirect("$this->url")->with('sukses','data jabatan berhasil ditambah');
     }
 
     /**
@@ -44,7 +52,11 @@ class JabatanController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return view("$this->views"."/show",[
+            'data'  => Jabatan::where('id',$id)->first(),
+            'page'  => 'show',
+            'title' => 'show'
+        ]);
     }
 
     /**
@@ -52,7 +64,11 @@ class JabatanController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view("$this->views"."/edit",[
+            'data'  => Jabatan::where('id',$id)->first(),
+            'page'  => 'edit',
+            'title' => 'edit'
+        ]);
     }
 
     /**
