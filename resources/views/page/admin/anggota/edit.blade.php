@@ -52,7 +52,8 @@
                     </div>
                     <div class="x_content">
                         <br />
-                        <form action="{{url('admin/anggota')}}/update" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" enctype="multipart/form-data">
+                        <form action="{{url('admin/anggota')}}/update" method="POST" id="demo-form2"
+                            data-parsley-validate class="form-horizontal form-label-left" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             @if (session()->has('sukses'))
@@ -90,7 +91,7 @@
                                 </label>
                                 <div class="col-md-6 col-sm-6 ">
                                     <input type="text" id="first-name" name="nip" required="required"
-                                        class="form-control "value="{{$data->nip}}">
+                                        class="form-control " value="{{$data->nip}}">
                                 </div>
                             </div>
 
@@ -129,8 +130,11 @@
                                     <span class="required">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 ">
-                                    <input type="text" name="idJabatan" id="first-name" required="required"
-                                        class="form-control " value="{{$data->idJabatan}}">
+                                    @forelse($jabatan as $p )
+                                        <option value="{{$p->id}}" class="form-control ">{{$p->nama}}</option>
+                                    @empty
+                                        <option value="0" class="form-control ">Kosong</option>
+                                    @endforelse
                                 </div>
                             </div>
 
@@ -138,8 +142,8 @@
                                 <label for="image-preview" class="col-form-label col-md-3 col-sm-3 label-align">
                                     Gambar</label>
                                 <div class="col-md-6 col-sm-6">
-                                    <img id="image-preview" src="{{url('Upload')}}/{{ $data->foto }}" alt="Preview Gambar"
-                                        style="display:none;width: 100%; max-width: 300px;" />
+                                    <img id="image-preview" src="{{url('Upload')}}/{{ $data->foto }}"
+                                        alt="Preview Gambar" style="display:none;width: 100%; max-width: 300px;" />
                                 </div>
                             </div>
 
