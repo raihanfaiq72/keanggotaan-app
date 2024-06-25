@@ -101,7 +101,7 @@ class AnggotaController extends Controller
                 $file->move("Upload/", $fileName);
             }
             $dataUsers = [
-                'foto'              => $fileName,
+                'foto'       => $fileName,
                 'nama'      => $request->nama,
                 'nip'       => $request->nip,
                 'golongan'  => $request->golongan,

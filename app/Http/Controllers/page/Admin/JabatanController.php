@@ -17,7 +17,9 @@ class JabatanController extends Controller
     public function index()
     {
         return view("$this->views"."/index",[
-            $this->dd()
+            'data'  => Jabatan::get(),
+            'title' => 'Admin | Anggota',
+            'page'  => 'Anggota All'
         ]);
     }
 
@@ -33,6 +35,7 @@ class JabatanController extends Controller
     {
         $request->validate([
             'nama'      => 'required',
+            
         ]);
     
 
@@ -87,14 +90,17 @@ class JabatanController extends Controller
             
         }
 
-        public function destroy()
+        public function destroy($id)
         {
-
-        }
-
-        public function dd()
-        {
-            dd(Jabatan::get());
+            try {
+                $transaction = Jabatan::findOrFail($id);
+            
+                $transaction->delete();
+            
+                return redirect()->back()->with('sukses', 'Item berhasil dihapus dari cart.');
+            } catch (\Exception $e) {
+                return redirect()->back()->with('gagal', 'Gagal menghapus item dari cart. Silakan coba lagi nanti.');
+            }
         }
     
 }

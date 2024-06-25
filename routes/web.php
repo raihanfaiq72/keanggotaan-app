@@ -32,6 +32,7 @@ Route::middleware(['login'])->group(function () {
         Route::resource('admin/anggota','page\Admin\AnggotaController');
         Route::resource('admin/jabatan','page\Admin\JabatanController');
 
+        Route::delete('delete-item/{id}', 'page\Admin\JabatanController@destroy')->name('delete-item');
         Route::delete('delete-item/{id}', 'page\Admin\AnggotaController@destroy')->name('delete-item');
         Route::resource('admin/crud','SimpleCrudController');
     });

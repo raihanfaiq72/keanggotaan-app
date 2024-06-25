@@ -36,7 +36,8 @@
                     <ul class="nav navbar-right panel_toolbox">
                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-expanded="false"><i class="fa fa-wrench"></i></a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="#">Settings 1</a>
                                 <a class="dropdown-item" href="#">Settings 2</a>
@@ -50,7 +51,8 @@
                 <div class="x_content">
 
                     <div class="table-responsive">
-                        <a href="{{url('admin/jabatan/create')}}"><button class="btn btn-primary">Tambah Jabatan</button></a>
+                        <a href="{{url('admin/jabatan/create')}}"><button class="btn btn-primary">Tambah
+                                Jabatan</button></a>
                         <table class="table table-striped jambo_table bulk_action">
                             <thead>
                                 <tr class="headings">
@@ -59,9 +61,11 @@
                                     </th>
                                     <th class="column-title"># </th>
                                     <th class="column-title">Nama </th>
+                                    <th class="column-title"></th>
                                     <th class="column-title no-link last"><span class="nobr">Action</span></th>
                                     <th class="bulk-actions" colspan="6">
-                                        <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
+                                        <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span
+                                                class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
                                     </th>
                                 </tr>
                             </thead>
@@ -77,11 +81,21 @@
                                     <td class=" last">
                                         <a href="{{ url('admin/jabatan/'.$jabatan->id) }}">View</a>
                                         <a href="{{ url('admin/jabatan/'.$jabatan->id.'/edit') }}">Edit</a>
+                                    <td class="last">
+                                        <form action="{{ url('delete-item/'.$jabatan->id) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-link text-danger"
+                                                onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</button>
+                                        </form>
+                                    </td>
                                     </td>
                                 </tr>
                                 @empty
                                 <tr class="odd pointer">
-                                    <td colspan="6" class="text-center"><h2>Data kosong</h2></td>
+                                    <td colspan="6" class="text-center">
+                                        <h2>Data kosong</h2>
+                                    </td>
                                 </tr>
                                 @endforelse
                             </tbody>
