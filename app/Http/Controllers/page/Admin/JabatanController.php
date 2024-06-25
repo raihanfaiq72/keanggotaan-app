@@ -17,9 +17,7 @@ class JabatanController extends Controller
     public function index()
     {
         return view("$this->views"."/index",[
-            'data'  => Jabatan::get(),
-            'title' => 'Admin | Anggota',
-            'page'  => 'Anggota All'
+            $this->dd()
         ]);
     }
 
@@ -35,7 +33,6 @@ class JabatanController extends Controller
     {
         $request->validate([
             'nama'      => 'required',
-            
         ]);
     
 
@@ -93,6 +90,11 @@ class JabatanController extends Controller
         public function destroy()
         {
 
+        }
+
+        public function dd()
+        {
+            dd(Jabatan::get());
         }
     
 }
