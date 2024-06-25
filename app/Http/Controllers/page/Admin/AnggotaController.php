@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\AnggotaModel;
+use App\Models\Jabatan;
 use DB;
 use Illuminate\Support\Facades\Hash;
 use Str;
@@ -27,7 +28,8 @@ class AnggotaController extends Controller
     {
         return view("$this->views"."/create",[
             'title' => 'Admin | Tambah Anggota',
-            'page'  => 'Tambah Anggota'
+            'page'  => 'Tambah Anggota',
+            'jabatan'   => Jabatan::get()
         ]);
     }
 
@@ -75,6 +77,7 @@ class AnggotaController extends Controller
     {
         return view("$this->views"."/edit",[
             'data'  => AnggotaModel::where('id',$id)->first(),
+            'jabatan'   => Jabatan::get(),
             'page'  => 'edit',
             'title' => 'edit'
         ]);

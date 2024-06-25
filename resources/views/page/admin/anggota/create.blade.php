@@ -127,8 +127,13 @@
                                     <span class="required">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 ">
-                                    <input type="text" name="idJabatan" id="first-name" required="required"
-                                        class="form-control ">
+                                    <select name="idJabatan" class="form-control " id="">
+                                        @forelse($jabatan as $p )
+                                            <option value="{{$p->id}}" class="form-control ">{{$p->nama}}</option>
+                                        @empty
+                                            <option value="0" class="form-control ">Kosong</option>
+                                        @endforelse
+                                    </select>
                                 </div>
                             </div>
 
