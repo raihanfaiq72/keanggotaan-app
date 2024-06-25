@@ -4,8 +4,11 @@ namespace App\Http\Controllers\page\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
-use App\Models\Users;
+use App\Models\UsersModel;
+use App\Models\AnggotaModel;
+use App\Models\Jabatan;
 
 class DashboardController extends Controller
 {
@@ -16,56 +19,34 @@ class DashboardController extends Controller
      */
     public function index()
     {
+        $pesan          = $this->pesan();
+        $jabAll         = jabatan::get();
+        $userJabHitung  = [];
+        foreach($jabAll as $p ){
+            $hitung = AnggotaModel::where('idJabatan',$p->id)->count();
+            $userJabHitung[$p->nama] = $hitung;
+        }
         return view("$this->views"."/index",[
-            'title' => 'Admin | Dashboard'
+            'title'           => 'Admin | Dashboard',
+            'data'            => $pesan,
+            'pegawai'         => AnggotaModel::count(),
+            'userJabHitung'   => $userJabHitung
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
+   private function pesan()
+   {
+        $user = AnggotaModel::where('id',session()->get('id'))->first(['created_at']);
+        if($user){
+            $tanggaltambah = Carbon::parse($user->created_at);
+            $tambah6bulan  = $tanggaltambah->addMonths(6);
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+            if (carbon::now()->greaterThanOrEqualTo($tambah6bulan)){
+                return "pesan anda 6 bulan";
+            }else{
+                return "tidak ada pesan";
+            }
+        }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
+   }
 }
