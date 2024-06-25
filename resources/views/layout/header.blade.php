@@ -52,7 +52,7 @@
                         </div>
                         <div class="profile_info">
                             <span>Welcome,</span>
-                            <h2>{{ session()->get('nama_lengkap')}}</h2>
+                            <h2>{{ session()->get('username')}}</h2>
                         </div>
                     </div>
                     <!-- /menu profile quick info -->

@@ -52,7 +52,8 @@
                     </div>
                     <div class="x_content">
                         <br />
-                        <form action="{{url('admin/anggota')}}" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" enctype="multipart/form-data">
+                        <form action="{{url('admin/anggota')}}" method="POST" id="demo-form2" data-parsley-validate
+                            class="form-horizontal form-label-left" enctype="multipart/form-data">
                             @csrf
                             @if (session()->has('sukses'))
                             <div class="alert alert-success" role="alert">
@@ -117,8 +118,10 @@
                                     <span class="required">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 ">
-                                    <input type="text" id="first-name" name="status" required="required"
-                                        class="form-control ">
+                                    <select name="status" class="form-control " id="">
+                                        <option value="1" class="form-control ">Aktif</option>
+                                        <option value="2" class="form-control ">Tidak Aktif</option>
+                                    </select>
                                 </div>
                             </div>
 
@@ -129,9 +132,9 @@
                                 <div class="col-md-6 col-sm-6 ">
                                     <select name="idJabatan" class="form-control " id="">
                                         @forelse($jabatan as $p )
-                                            <option value="{{$p->id}}" class="form-control ">{{$p->nama}}</option>
+                                        <option value="{{$p->id}}" class="form-control ">{{$p->nama}}</option>
                                         @empty
-                                            <option value="0" class="form-control ">Kosong</option>
+                                        <option value="0" class="form-control ">Kosong</option>
                                         @endforelse
                                     </select>
                                 </div>

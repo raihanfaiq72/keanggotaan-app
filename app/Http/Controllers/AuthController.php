@@ -43,6 +43,7 @@ class AuthController extends Controller
             $session = [
                 'id'            => $userLogin->id,
                 'role'          => $userLogin->role,
+                'username'      => $userLogin->username,
                 'isLogin'       => true 
             ];
 
@@ -52,6 +53,7 @@ class AuthController extends Controller
             $session = [
                 'id'            => $userLogin->id,
                 'role'          => $userLogin->role,
+                'username'      => $userLogin->username,
                 'isLogin'       => true 
             ];
 

@@ -3,7 +3,7 @@
     <div class="menu_section">
         <h3>Menu Admin</h3>
         <ul class="nav side-menu">
-            <li><a><i class="fa fa-home"></i> Home </a>
+            <li><a href="{{url('admin/dashboard')}}"><i class="fa fa-home"></i> Home </a>
             </li>
             <li><a href="{{url('admin/anggota')}}"><i class="fa fa-home"></i>Anggota</a>
             </li>
