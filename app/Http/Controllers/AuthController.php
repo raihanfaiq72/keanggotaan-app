@@ -58,9 +58,10 @@ class AuthController extends Controller
             ];
 
             session($session);
-            return redirect('sekretaris/dashboard')->with('sukses','selamat datang kembali');
+            return redirect('sekretatiat/dashboard')->with('sukses','selamat datang kembali');
         }
     }
+
 
     public function register()
     {
@@ -84,7 +85,6 @@ class AuthController extends Controller
             'katasandi'     => $request->password
         ];
 
-        // dd($data);
 
         UsersModel::create($data);
 
