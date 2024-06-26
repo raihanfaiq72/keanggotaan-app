@@ -113,8 +113,14 @@
                                     <td class=" ">{{$p->nip}}</td>
                                     <td class=" ">{{$p->golongan}}</td>
                                     <td class=" ">{{$p->pangkat}}</td>
-                                    <td class="a-right a-right ">{{$p->status}}</td>
-                                    <td class=" ">{{$p->idJabatan}}</td>
+                                    <td class="a-right a-right ">
+                                        @if($p->status ==1)
+                                        Aktip
+                                        @else
+                                        Ga Aktip
+                                        @endif
+                                    </td>
+                                    <td class=" ">{{$p->jabatan->nama}}</td>
                                     <td class=" last"><a href="{{url('/admin/anggota/'.$p->id,[])}}">View</a>
                                     <td class=" last"><a href="{{url('/admin/anggota/'.$p->id,[])}}/edit">Edit</a>
                                     <td class="last">
