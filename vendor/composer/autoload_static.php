@@ -324,8 +324,8 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         ),
         'Spatie\\Ignition\\' => 
         array (
-            0 => __DIR__ . '/..' . '/spatie/ignition/src',
-            1 => __DIR__ . '/..' . '/spatie/error-solutions/legacy/ignition',
+            0 => __DIR__ . '/..' . '/spatie/error-solutions/legacy/ignition',
+            1 => __DIR__ . '/..' . '/spatie/ignition/src',
         ),
         'Spatie\\FlareClient\\' => 
         array (
@@ -541,7 +541,8 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'App\\Http\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\SimpleCrudController' => __DIR__ . '/../..' . '/app/Http/Controllers/SimpleCrudController.php',
-        'App\\Http\\Controllers\\page\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/page/DashboardController.php',
+        'App\\Http\\Controllers\\page\\Admin\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/page/Admin/DashboardController.php',
+        'App\\Http\\Controllers\\page\\Sekretaris\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/page/Sekretaris/DashboardController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -555,6 +556,8 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Models\\AnggotaModel' => __DIR__ . '/../..' . '/app/Models/AnggotaModel.php',
+        'App\\Models\\Jabatan' => __DIR__ . '/../..' . '/app/Models/Jabatan.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Models\\UsersModel' => __DIR__ . '/../..' . '/app/Models/UsersModel.php',
         'App\\Models\\crudmodel' => __DIR__ . '/../..' . '/app/Models/crudmodel.php',

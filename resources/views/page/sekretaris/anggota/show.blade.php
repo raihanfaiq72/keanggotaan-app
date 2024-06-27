@@ -52,7 +52,7 @@
                     </div>
                     <div class="x_content">
                         <br />
-                        <form action="{{url('sekretariat/anggota')}}" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" enctype="multipart/form-data">
+                        <form action="{{url('sekretaris/anggota')}}" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" enctype="multipart/form-data">
                             @csrf
                             @if (session()->has('sukses'))
                             <div class="alert alert-success" role="alert">

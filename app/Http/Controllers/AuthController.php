@@ -58,7 +58,7 @@ class AuthController extends Controller
             ];
 
             session($session);
-            return redirect('sekretariat/dashboard')->with('sukses','selamat datang kembali');
+            return redirect('sekretaris/dashboard')->with('sukses','selamat datang kembali');
         }
     }
 

@@ -38,14 +38,14 @@ Route::middleware(['login'])->group(function () {
         Route::resource('admin/crud','SimpleCrudController');
     });
 
-    Route::middleware(['sekretariat'])->group(function () {
+    Route::middleware(['sekretaris'])->group(function () {
 
-        Route::resource('sekretariat/dashboard','page\Sekretariat\DashboardController');
-        Route::resource('sekretariat/anggota','page\Sektretarit\AnggotaController');
-        Route::resource('sekretariat/jabatan','page\Sekretariat\JabatanController');
+        Route::resource('sekretaris/dashboard','page\Sekretaris\DashboardController');
+        Route::resource('sekretaris/anggota','page\Sektretaris\AnggotaController');
+        Route::resource('sekretaris/jabatan','page\Sekretaris\JabatanController');
 
         Route::delete('delete-item/{id}', 'page\Admin\JabatanController@destroy')->name('delete-item');
         Route::delete('delete-item/{id}', 'page\Admin\AnggotaController@destroy')->name('delete-item');
-        Route::resource('sekretariat/crud','SimpleCrudController');
+        Route::resource('sekretaris/crud','SimpleCrudController');
     });
 });

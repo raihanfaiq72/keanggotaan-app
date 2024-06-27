@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Page\Sekretariat;
+namespace App\Http\Controllers\Page\Sekretaris;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -12,14 +12,14 @@ use Str;
 use File;
 class AnggotaController extends Controller
 {
-    private $views = 'page/sekretariat/anggota';
-    private $url = 'sekretariat/anggota';
+    private $views = 'page/sekretaris/anggota';
+    private $url = 'sekretaris/anggota';
 
     public function index()
     {
         return view("$this->views"."/index",[
             'data'  => AnggotaModel::get(),
-            'title' => 'Sekretariat | Anggota',
+            'title' => 'Sekretaris | Anggota',
             'page'  => 'Anggota All'
         ]);
     }
@@ -27,7 +27,7 @@ class AnggotaController extends Controller
     public function create()
     {
         return view("$this->views"."/create",[
-            'title' => 'Sekretariat | Tambah Anggota',
+            'title' => 'Sekretaris | Tambah Anggota',
             'page'  => 'Tambah Anggota',
             'jabatan'   => Jabatan::get()
         ]);

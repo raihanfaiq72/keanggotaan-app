@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\page\Sekretariat;
+namespace App\Http\Controllers\page\Sekretaris;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -13,7 +13,7 @@ use App\Models\Jabatan;
 class DashboardController extends Controller
 {
     private $url = '/';
-    private $views = 'page/sekretariat/dashboard';
+    private $views = 'page/sekretaris/dashboard';
     /**
      * Display a listing of the resource.
      */
@@ -22,12 +22,12 @@ class DashboardController extends Controller
         $pesan          = $this->pesan();
         $jabAll         = jabatan::get();
         $userJabHitung  = [];
-        foreach($jabAll as $p ){
+        foreach($jabAll as $p)
             $hitung = AnggotaModel::where('idJabatan',$p->id)->count();
             $userJabHitung[$p->nama] = $hitung;
-        }
+        
         return view("$this->views"."/index",[
-            'title'           => 'Sekretariat | Dashboard',
+            'title'           => 'Sekretaris | Dashboard',
             'data'            => $pesan,
             'pegawai'         => AnggotaModel::count(),
             'userJabHitung'   => $userJabHitung
@@ -47,6 +47,6 @@ class DashboardController extends Controller
                 return "tidak ada pesan";
             }
         }
-
-   }
+    }
 }
+
