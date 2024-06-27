@@ -59,10 +59,13 @@
                                     <th>
                                         <input type="checkbox" id="check-all" class="flat">
                                     </th>
-                                    <th class="column-title"># </th>
+                                    <th class="column-title">No </th>
                                     <th class="column-title">Nama </th>
-                                    <th class="column-title"></th>
-                                    <th class="column-title no-link last"><span class="nobr">Action</span></th>
+
+                                    <th class="column-title no-link last"><span class="nobr">Lihat</span>
+                                    <th class="column-title no-link last"><span class="nobr">Edit</span>
+                                    <th class="column-title no-link last"><span class="nobr">Hapus</span>
+
                                     <th class="bulk-actions" colspan="6">
                                         <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span
                                                 class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
@@ -78,9 +81,8 @@
                                     </td>
                                     <td class=" ">{{ $loop->iteration }}</td>
                                     <td class=" ">{{ $jabatan->nama }}</td>
-                                    <td class=" last">
-                                        <a href="{{ url('admin/jabatan/'.$jabatan->id) }}">View</a>
-                                        <a href="{{ url('admin/jabatan/'.$jabatan->id.'/edit') }}">Edit</a>
+                                    <td class=" last"><a href="{{url('/sekretaris/anggota/'.$jabatan->id,[])}}">View</a>
+                                    <td class=" last"><a href="{{url('/sekretaris/anggota/'.$jabatan->id,[])}}/edit">Edit</a>
                                     <td class="last">
                                         <form action="{{ url('delete-item/'.$jabatan->id) }}" method="POST">
                                             @csrf

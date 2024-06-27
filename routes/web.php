@@ -31,11 +31,12 @@ Route::middleware(['login'])->group(function () {
         Route::resource('admin/dashboard','page\Admin\DashboardController');
         Route::resource('admin/anggota','page\Admin\AnggotaController');
         Route::resource('admin/jabatan','page\Admin\JabatanController');
+        Route::resource('admin/kgb','page\Admin\KgbController');
 
-
+        
         Route::delete('delete-item/{id}', 'page\Admin\JabatanController@destroy')->name('delete-item');
         Route::delete('delete-item/{id}', 'page\Admin\AnggotaController@destroy')->name('delete-item');
-        Route::resource('admin/crud','SimpleCrudController');
+        
     });
 
     Route::middleware(['sekretaris'])->group(function () {
@@ -44,8 +45,8 @@ Route::middleware(['login'])->group(function () {
         Route::resource('sekretaris/anggota','page\Sektretaris\AnggotaController');
         Route::resource('sekretaris/jabatan','page\Sekretaris\JabatanController');
 
-        Route::delete('delete-item/{id}', 'page\Admin\JabatanController@destroy')->name('delete-item');
-        Route::delete('delete-item/{id}', 'page\Admin\AnggotaController@destroy')->name('delete-item');
+        Route::delete('delete-item/{id}', 'page\Sekretaris\JabatanController@destroy')->name('delete-item');
+        Route::delete('delete-item/{id}', 'page\Sekretaris\AnggotaController@destroy')->name('delete-item');
         Route::resource('sekretaris/crud','SimpleCrudController');
     });
 });

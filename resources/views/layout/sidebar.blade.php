@@ -9,7 +9,7 @@
             </li>
             <li><a href="{{url('admin/jabatan')}}"><i class="fa fa-home"></i>Jabatan</a>
             </li>
-            <li><a><i class="fa fa-home"></i> Home </a>
+            <li><a href="{{url('admin/kgb')}}"><i class="fa fa-home"></i>KGB</a>
             </li>
             <li><a><i class="fa fa-home"></i> Home </a>
             </li>
